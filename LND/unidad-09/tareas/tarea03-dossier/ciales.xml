@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ciales>
+  <alumno>
+    <cial>A18X111</cial>
+    <datos>Javier - Márquez Fernández</datos>
+    <curso>1º ASIR</curso>
+  </alumno>
+  <alumno>
+    <cial>A27M242</cial>
+    <datos>María - Álvarez Pérez</datos>
+    <curso>1º ASIR</curso>
+  </alumno>
+  <alumno>
+    <cial>A90R112</cial>
+    <datos>Iván - Rodríguez Pérez</datos>
+    <curso>1º ASIR</curso>
+  </alumno>
+  <alumno>
+    <cial>A92T861</cial>
+    <datos>Marcos - Domínguez</datos>
+    <curso>2º ASIR</curso>
+  </alumno>
+  <alumno>
+    <cial>A92R003</cial>
+    <datos>Luis Fernando - Jiménez Pérez</datos>
+    <curso>2º ASIR</curso>
+  </alumno>
+  <alumno>
+    <cial>A87R122</cial>
+    <datos>Elena - Ramírez</datos>
+    <curso>2º ASIR</curso>
+  </alumno>
+  <alumno>
+    <cial>A95M600</cial>
+    <datos>Irina - Lugo Lugo</datos>
+    <curso>1º DAI</curso>
+  </alumno>
+  <alumno>
+    <cial>A92R543</cial>
+    <datos>Genaro - Hernández Hernández</datos>
+    <curso>1º DAI</curso>
+  </alumno>
+  <alumno>
+    <cial>A92R590</cial>
+    <datos>Miguel - Rodríguez</datos>
+    <curso>1º DAI</curso>
+  </alumno>
+</ciales>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE clases[
+    <!ELEMENT clases (clase+)>
+    <!ELEMENT clase (profesor+,(alumno|alumna)+)>
+    <!ELEMENT profesor (nombre,apellidos?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ELEMENT alumno (nombre,apellidos)>
+    <!ELEMENT alumna (nombre,apellidos)>
+    <!ATTLIST clase pizarra (sí|no) "sí">
+]>
+
+<clases>
+    <clase>
+        <profesor>
+            <nombre>Juanito</nombre>
+            <apellidos>Macarrón</apellidos>
+        </profesor>
+        <profesor>
+            <nombre>Luisito</nombre>
+            <apellidos>González</apellidos>
+        </profesor>
+        <alumno>
+            <nombre>Pepito</nombre>
+        </alumno>
+        <alumna>
+            <nombre>Carlos</nombre>
+            <apellidos>Reynaldo</apellidos>
+        </alumna>
+        <alumna>
+            <nombre>Aura</nombre>
+            <apellidos>Guedez</apellidos>
+        </alumna>
+        <alumna>
+            <nombre>Alexa</nombre>
+            <apellidos>Martinez</apellidos>
+        </alumna>
+    </clase>
+    <clase>
+        <profesor>
+            <nombre>Donato</nombre>
+            <apellidos>Linares</apellidos>
+        </profesor>
+        <alumna>
+            <nombre>Carmen</nombre>
+        </alumna>
+    </clase>
+</clases>
+

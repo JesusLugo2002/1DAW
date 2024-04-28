@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instituto SYSTEM "instituto.dtd">
+
+<instituto>
+    <clase grupo="Desarrollo de Aplicaciones Web" curso="1">
+        <alumno sexo="H" cial="A92C950D93">
+            <nombre>Juan</nombre>
+            <apellidos>Pérez Márquez</apellidos>
+        </alumno>
+        <alumno sexo="M" cial="A95C950D93">
+            <nombre>Eva </nombre>
+            <apellidos>Álvarez Marchena</apellidos>
+        </alumno>
+    </clase>
+    <clase grupo="Desarrollo de Aplicaciones Web" curso="2">
+        <alumno sexo="M" cial="A93X942D95">
+            <nombre>Julia </nombre>
+            <apellidos>Pérez González </apellidos>
+        </alumno>
+        <alumno sexo="H" cial="A95C740D74">
+            <nombre>Manuel </nombre>
+            <apellidos>López López </apellidos>
+        </alumno>
+    </clase>
+</instituto>

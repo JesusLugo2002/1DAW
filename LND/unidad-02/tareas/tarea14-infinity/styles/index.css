@@ -1,0 +1,29 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+article {
+    background-color: lightsalmon;
+}
+
+article p {
+    display: none;
+}
+
+nav {
+    background-color: lightcoral;
+    width: 100%;
+}
+
+nav ul li {
+    list-style: none;
+    float: left;
+    margin-right: 10%;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Formulario de Registro</title>
+    </head>
+    <body>
+        <h3>Jesús Daniel Lugo López</h3>
+        <form action="procesar.php" method="post"></form>
+            <fieldset>
+                <legend>Datos del propietario</legend>
+                    <label for="iname">Nombre:</label>
+                    <input type="text" id="iname" name="nombre">
+                    <br>
+                    <label for="isex">Sexo:</label>
+                    <input type="radio" name="sexo" id="hombre" value="hombre" checked>
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" name="sexo" id="mujer" value="mujer">
+                    <label for="mujer">Mujer</label><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Datos del vehículo</legend>
+                    <label for="marca/modelo">Marca/modelo:</label>
+                    <input type="text" id="marca/modelo" name="marca/modelo">
+                    <br>
+                    <label for="matricula">Matrícula:</label>
+                    <input type="text" id="matricula" name="matricula">
+                    <br>
+                    <label for="caracteristicas">Características:</label>
+                    <select name="caracteristicas" id="caracteristicas">
+                        <option value="Utilitario">Utilitario</option>
+                        <option value="Todo Terreno">Todo Terreno</option>
+                        <option value="Alta Gama">Alta Gama</option>
+                    </select>
+                    <br>
+                    <label for="otros_datos">Otros datos:</label> 
+                    <br>
+                    <input type="checkbox" name="otros_datos" id="servofrenos" value="Servofrenos" checked>
+                    <label for="servofrenos">Servofrenos</label>
+                    <input type="checkbox" name="otros_datos" id="elevalunas" value="Elevalunas" checked>
+                    <label for="elevalunas">Elevalunas</label>
+                    <input type="checkbox" name="otros_datos" id="remolque" value="Remolque">
+                    <label for="remolque">Remolque</label>
+                    <br>
+            </fieldset>
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>

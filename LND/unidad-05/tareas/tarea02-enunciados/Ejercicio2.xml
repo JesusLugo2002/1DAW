@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<inmobiliaria>
+    <casa>
+        <metros>125</metros>
+        <propietario>Don Rico</propietario>
+        <precio>590000</precio>
+        <direccion>Calle Santa Lucía</direccion>
+    </casa>
+</inmobiliaria>

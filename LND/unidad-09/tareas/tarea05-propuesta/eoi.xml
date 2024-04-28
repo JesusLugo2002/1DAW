@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New document created with EditiX at Wed May 15 15:12:32 BST 2013 -->
+
+<escuelasdeidiomas>
+	<escuela sede="La Laguna">
+		<idioma codigo="Alemán">
+			<nivel certificacion="A2">
+				<examen tipo="escrito">4 de Junio</examen>
+				<examen tipo="oral">6 de Junio</examen>
+			</nivel>
+			<nivel certificacion="B2">
+				<examen tipo="escrito">5 de Junio</examen>
+				<examen tipo="oral">7 de Junio</examen>
+			</nivel>
+		</idioma>
+		<idioma codigo="Ruso">
+			<nivel certificacion="A1">
+				<examen tipo="escrito">3 de Junio</examen>
+				<examen tipo="oral">8 de Junio</examen>
+			</nivel>
+			<nivel certificacion="A2">
+				<examen tipo="escrito">4 de Junio</examen>
+				<examen tipo="oral">4 de Junio</examen>
+			</nivel>
+		</idioma>
+		<idioma codigo="Inglés">
+			<nivel certificacion="A1">
+				<examen tipo="escrito">29 de Mayo</examen>
+				<examen tipo="oral">31 de Mayo</examen>
+			</nivel>
+			<nivel certificacion="A2">
+				<examen tipo="escrito">3 de Junio</examen>
+				<examen tipo="oral">4 de Junio</examen>
+			</nivel>
+			<nivel certificacion="B1">
+				<examen tipo="escrito">5 de Junio</examen>
+				<examen tipo="oral">6 de Junio</examen>
+			</nivel>
+			<nivel certificacion="B2">
+				<examen tipo="escrito">7 de Junio</examen>
+				<examen tipo="oral">10 de Junio</examen>
+			</nivel>
+			<nivel certificacion="C1">
+				<examen tipo="escrito">11 de Junio</examen>
+				<examen tipo="oral">12 de Junio</examen>
+			</nivel>
+			<nivel certificacion="C2">
+				<examen tipo="escrito">12 de Junio</examen>
+				<examen tipo="oral">13 de Junio</examen>
+			</nivel>
+		</idioma>
+	</escuela>
+	<escuela sede="La Orotava">
+		<idioma codigo="Alemán">
+			<nivel certificacion="A1">
+				<examen tipo="escrito">7 de Junio - Mañana</examen>
+				<examen tipo="oral">7 de Junio - Tarde</examen>
+			</nivel>
+		</idioma>
+		<idioma codigo="Inglés">
+			<nivel certificacion="A2">
+				<examen tipo="escrito">3 de Junio - Mañana</examen>
+				<examen tipo="oral">4 de Junio - Tarde</examen>
+			</nivel>
+			<nivel certificacion="B2">
+				<examen tipo="escrito">5 de Junio - Mañana</examen>
+				<examen tipo="oral">6 de Junio - Mañana</examen>
+			</nivel>
+		</idioma>
+	</escuela>
+	<escuela sede="Icod de Los Vinos">
+		<idioma codigo="Inglés">
+			<nivel certificacion="A1">
+				<examen tipo="escrito">13 de Junio</examen>
+				<examen tipo="oral">14 de Junio</examen>
+			</nivel>
+			<nivel certificacion="B1">
+				<examen tipo="escrito">15 de Junio</examen>
+				<examen tipo="oral">16 de Junio</examen>
+			</nivel>
+		</idioma>
+	</escuela>
+	<escuela sede="Puerto de La Cruz">
+		<idioma codigo="Alemán">
+			<nivel certificacion="C1">
+				<examen tipo="escrito">13 de Junio</examen>
+				<examen tipo="oral">14 de Junio</examen>
+			</nivel>
+			<nivel certificacion="C2">
+				<examen tipo="escrito">15 de Junio</examen>
+				<examen tipo="oral">16 de Junio</examen>
+			</nivel>
+		</idioma>
+		<idioma codigo="Francés">
+			<nivel certificacion="A1">
+				<examen tipo="escrito">11 de Junio</examen>
+				<examen tipo="oral">12 de Junio</examen>
+			</nivel>
+			<nivel certificacion="B1">
+				<examen tipo="escrito">14 de Junio</examen>
+				<examen tipo="oral">15 de Junio</examen>
+			</nivel>
+		</idioma>
+
+	</escuela>
+	<escuela sede="Santa Cruz">
+		<idioma codigo="Inglés">
+			<nivel certificacion="A1">
+				<examen tipo="escrito">3 de Mayo</examen>
+				<examen tipo="oral">4 de Mayo</examen>
+			</nivel>
+			<nivel certificacion="A2">
+				<examen tipo="escrito">3 de Junio</examen>
+				<examen tipo="oral">4 de Junio</examen>
+			</nivel>
+			<nivel certificacion="B1">
+				<examen tipo="escrito">5 de Junio</examen>
+				<examen tipo="oral">6 de Junio</examen>
+			</nivel>
+			<nivel certificacion="B2">
+				<examen tipo="escrito">5 de Junio</examen>
+				<examen tipo="oral">6 de Junio</examen>
+			</nivel>
+			<nivel certificacion="C1">
+				<examen tipo="escrito">7 de Junio</examen>
+				<examen tipo="oral">8 de Junio</examen>
+			</nivel>
+			<nivel certificacion="C2">
+				<examen tipo="escrito">7 de Junio</examen>
+				<examen tipo="oral">8 de Junio</examen>
+			</nivel>
+		</idioma>
+		<idioma codigo="Francés">
+			<nivel certificacion="A1">
+				<examen tipo="escrito">27 de Mayo</examen>
+				<examen tipo="oral">28 de Mayo</examen>
+			</nivel>
+			<nivel certificacion="A2">
+				<examen tipo="escrito">29 de Mayo</examen>
+				<examen tipo="oral">31 de Mayo</examen>
+			</nivel>
+			<nivel certificacion="B1">
+				<examen tipo="escrito">27 de Mayo</examen>
+				<examen tipo="oral">28 de Mayo</examen>
+			</nivel>
+			<nivel certificacion="B2">
+				<examen tipo="escrito">29 de Mayo</examen>
+				<examen tipo="oral">31 de Mayo</examen>
+			</nivel>
+			<nivel certificacion="C1">
+				<examen tipo="escrito">3 de Mayo</examen>
+				<examen tipo="oral">4 de Mayo</examen>
+			</nivel>
+			<nivel certificacion="C2">
+				<examen tipo="escrito">3 de Mayo</examen>
+				<examen tipo="oral">4 de Mayo</examen>
+			</nivel>
+		</idioma>
+		<idioma codigo="Chino">
+			<nivel certificacion="A1">
+				<examen tipo="escrito">23 de Mayo - Mañana</examen>
+				<examen tipo="oral">23 de Mayo - Tarde</examen>
+			</nivel>
+			<nivel certificacion="A2">
+				<examen tipo="escrito">24 de Mayo - Mañana</examen>
+				<examen tipo="oral">24 de Mayo - Tarde</examen>
+			</nivel>
+		</idioma>
+                             <idioma codigo="Árabe">
+			<nivel certificacion="A1">
+				<examen tipo="escrito">28 de Mayo - Mañana</examen>
+				<examen tipo="oral">28 de Mayo - Tarde</examen>
+			</nivel>
+			<nivel certificacion="A2">
+				<examen tipo="escrito">29 de Mayo - Mañana</examen>
+				<examen tipo="oral">29 de Mayo - Tarde</examen>
+			</nivel>
+		</idioma>
+		<idioma codigo="Alemán">
+			<nivel certificacion="A1">
+				<examen tipo="escrito">25 de Mayo - Mañana</examen>
+				<examen tipo="oral">25 de Mayo - Tarde</examen>
+			</nivel>
+			<nivel certificacion="A2">
+				<examen tipo="escrito">27 de Mayo - Mañana</examen>
+				<examen tipo="oral">27 de Mayo - Tarde</examen>
+			</nivel>
+		</idioma>
+	</escuela>
+
+</escuelasdeidiomas>

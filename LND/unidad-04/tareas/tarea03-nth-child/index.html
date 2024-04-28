@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title></title>
+        <style type="text/css" >
+            table {
+                border-spacing: 3px;
+                border-collapse: separate;
+                border-top: 8px solid gray;
+                border-left: 8px solid gray;
+                border-bottom: 8px solid black;
+                border-right: 8px solid black;
+                background-color: #F3E2A9;
+                padding: 5px;
+            }
+
+            .cabecera {
+                background-color: #FAAC58;
+                color: green;
+            }
+
+            .alineadoDcha {
+                text-align: right;
+            }
+
+            .euro {
+                background-color: #E6E6E6;
+            }
+
+            .dolar {
+                background-color: #D8D8D8;
+            }
+
+            .libra {
+                background-color:  #BDBDBD;
+            }
+
+            .yen {
+                background-color: #A4A4A4;
+            }
+
+            tr:nth-child(even) {
+                background-color: #81F79F;
+            }
+
+            tr:nth-child(odd):not(:first-child) {
+                background-color: #81DAF5;
+            }
+
+            td {
+                border: 1px solid black;
+            }
+
+            table, th, td {
+                border-spacing: 7px;
+            }
+
+            td:hover {
+                background-clip: content-box;
+                -webkit-background-clip: content-box;
+                background-color: transparent;
+                animation: Animation 1s linear infinite;
+            }
+
+            @keyframes Animation {
+                60% {
+                    background-color:yellow;
+                }
+                50% {
+                    background-color:orangered;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenedor">
+
+            <table id="tablaCambio">
+              <tr class="cabecera">
+                <th>Cambio</th>
+                <th>Compra</th>
+                <th>Venta</th>
+                <th>Máximo</th>
+                <th>Mínimo</th>
+              </tr>
+              <tr>
+                <th class="euro alineadoDcha">Euro/Dolar</th>
+                <td>1.25</td>
+                <td>1.25</td>
+                <td>1.25</td>
+                <td>1.24</td>
+              </tr>
+              <tr>
+                <th class="dolar alineadoDcha">Dolar/Yen</th>
+                <td>119.01</td>
+                <td>119.05</td>
+                <td>119.82</td>
+                <td>119.82</td>
+              </tr>
+              <tr>
+                <th class="libra alineadoDcha">Libra/Dolar</th>
+                <td>1.86</td>
+                <td>1.86</td>
+                <td>1.86</td>
+                <td>1.85</td>
+              </tr>
+              <tr>
+                <th class="yen alineadoDcha">Yen/Euro</th>
+                <td>0.67</td>
+                <td>0.67</td>
+                <td>0.66</td>
+                <td>0.67</td>
+              </tr>
+            </table>
+        </div>
+    </body>
+</html>

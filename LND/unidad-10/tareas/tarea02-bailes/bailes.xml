@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bailes>
+    <baile id="1">
+        <nombre>Tango</nombre>
+        <precio moneda="Euro" cuota="Trimestral">75</precio>
+        <comienzo>01/02/2024</comienzo>
+        <fin>20/02/2024</fin>
+        <profesor>Juan Luis</profesor>
+        <sala>1</sala>
+        <plazas>15</plazas>
+    </baile>
+
+    <baile id="2">
+        <nombre>Salsa</nombre>
+        <precio moneda="Dolares" cuota="Trimestral">35</precio>
+        <comienzo>01/02/2024</comienzo>
+        <fin>20/02/2024</fin>
+        <profesor>Juan Luis</profesor>
+        <sala>2</sala>
+        <plazas>15</plazas>
+    </baile>
+
+     <baile id="3">
+        <nombre>Bachata</nombre>
+        <precio moneda="Euro" cuota="Trimestral">40</precio>
+        <comienzo>01/02/2024</comienzo>
+        <fin>20/02/2024</fin>
+        <profesor>Pepito Pérez</profesor>
+        <sala>2</sala>
+        <plazas>10</plazas>
+    </baile>
+
+      <baile id="4">
+        <nombre>Merengue</nombre>
+        <precio moneda="Euro" cuota="Mensual">100</precio>
+        <comienzo>01/02/2024</comienzo>
+        <fin>20/02/2024</fin>
+        <profesor>Michael Jackson</profesor>
+        <sala>3</sala>
+        <plazas>10</plazas>
+    </baile>
+
+</bailes>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/home/daw/Documentos/xml/t9/catalogo_xsl.xsl"?>
+
+<catalogo>
+  <cd>
+    <titulo>El mar que no cesa</titulo>
+    <artista>Heroes del silencio</artista>
+    <pais>España</pais>
+    <compania>Dro</compania>
+    <precio>5,60</precio>
+    <anio>1989</anio>
+  </cd>
+  
+  <cd>
+    <titulo>París</titulo>
+    <artista>Supertramp</artista>
+    <pais>Inglaterra</pais>
+    <compania>Columbia</compania>
+    <precio>10,80</precio>
+    <anio>2000</anio>
+  </cd>
+  
+  <cd>
+    <titulo>Bulerías</titulo>
+    <artista>Manolo Escobar</artista>
+    <pais>España</pais>
+    <compania>Dro</compania>
+    <precio>5,60</precio>
+    <anio>1976</anio>
+  </cd>
+  
+  <cd>
+    <titulo>Manolo</titulo>
+    <artista>El Fary</artista>
+    <pais>España</pais>
+    <compania>Dro</compania>
+    <precio>4,80</precio>
+    <anio>1950</anio>
+  </cd>
+  
+</catalogo>

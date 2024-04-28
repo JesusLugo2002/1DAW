@@ -1,0 +1,141 @@
+<instituto codigo="38010700" nombre="IES Domingo Pérez Minik">
+<curso codigo="1" nombre="1º ASIR">
+<alumno cial="A18X111">
+<nombre>Javier</nombre>
+<apellidos>Márquez Fernández</apellidos>
+<!-- Javier Márquez NO es un alumno repetidor -->
+<repetidor>False</repetidor>
+<notas>
+<asignatura>Lenguajes de marcas</asignatura>
+<nota>8</nota>
+<asignatura>Redes</asignatura>
+<nota>7</nota>
+<asignatura>Fundamentos de hardware</asignatura>
+<nota>3</nota>
+<asignatura>Sistemas Operativos</asignatura>
+<nota>6</nota>
+</notas>
+</alumno>
+<alumno cial="A27M242">
+<nombre>María</nombre>
+<apellidos>Álvarez Pérez</apellidos>
+<!-- María Álvarez es una alumna repetidora -->
+<repetidor>True</repetidor>
+<notas>
+<asignatura>Lenguajes de marcas</asignatura>
+<nota>5</nota>
+<asignatura>Redes</asignatura>
+<nota>5</nota>
+<asignatura>Fundamentos de hardware</asignatura>
+<nota>7</nota>
+<asignatura>Sistemas Operativos</asignatura>
+<nota>6</nota>
+</notas>
+</alumno>
+<alumno cial="A90R112">
+<nombre>Iván</nombre>
+<apellidos>Rodríguez Pérez</apellidos>
+<repetidor>False</repetidor>
+<notas>
+<asignatura>Lenguajes de marcas</asignatura>
+<nota>4</nota>
+<asignatura>Redes</asignatura>
+<nota>9</nota>
+<asignatura>Fundamentos de hardware</asignatura>
+<nota>9</nota>
+<asignatura>Sistemas Operativos</asignatura>
+<nota>3</nota>
+</notas>
+</alumno>
+</curso>
+<curso codigo="2" nombre="2º ASIR">
+<alumno cial="A92T861">
+<nombre>Marcos</nombre>
+<apellidos>Domínguez</apellidos>
+<repetidor>True</repetidor>
+<notas>
+<asignatura>Seguridad Informática</asignatura>
+<nota>5</nota>
+<asignatura>Planificación de redes</asignatura>
+<nota>8</nota>
+<asignatura>Servicios web</asignatura>
+<nota>7</nota>
+<asignatura>Prácticas de empresa</asignatura>
+<nota>APTO</nota>
+</notas>
+</alumno>
+<alumno cial="A92R003">
+<nombre>Luis Fernando</nombre>
+<apellidos>Jiménez Pérez</apellidos>
+<repetidor>False</repetidor>
+<notas>
+<asignatura>Seguridad Informática</asignatura>
+<nota>3</nota>
+<asignatura>Planificación de redes</asignatura>
+<nota>4</nota>
+<asignatura>Servicios web</asignatura>
+<nota>4</nota>
+<asignatura>Prácticas de empresa</asignatura>
+<nota>No APTO</nota>
+</notas>
+</alumno>
+<alumno cial="A87R122">
+<nombre>Elena</nombre>
+<apellidos>Ramírez</apellidos>
+<repetidor>False</repetidor>
+<notas>
+<asignatura>Seguridad Informática</asignatura>
+<nota>6</nota>
+<asignatura>Planificación de redes</asignatura>
+<nota>10</nota>
+<asignatura>Servicios web</asignatura>
+<nota>8</nota>
+<asignatura>Prácticas de empresa</asignatura>
+<nota>APTO</nota>
+</notas>
+</alumno>
+</curso>
+<curso codigo="3" nombre="1º DAI">
+<alumno cial="A95M600">
+<nombre>Irina</nombre>
+<apellidos>Lugo Lugo</apellidos>
+<repetidor>False</repetidor>
+<notas>
+<asignatura>Programación</asignatura>
+<nota>8</nota>
+<asignatura>Análisis</asignatura>
+<nota>7</nota>
+<asignatura>Medios</asignatura>
+<nota>3</nota>
+<asignatura>Multimedia</asignatura>
+<nota>6</nota>
+</notas>
+</alumno>
+<alumno cial="A92R543">
+<nombre>Genaro</nombre>
+<apellidos>Hernández Hernández</apellidos>
+<repetidor>True</repetidor>
+<notas>
+<asignatura>Programación</asignatura>
+<nota>5</nota>
+<asignatura>Análisis</asignatura>
+<nota>5</nota>
+<asignatura>Medios</asignatura>
+<nota>7</nota>
+<asignatura>Multimedia</asignatura>
+<nota>6</nota>
+</notas>
+</alumno>
+<alumno cial="A92R590">
+<nombre>Miguel</nombre>
+<apellidos>Rodríguez</apellidos>
+<repetidor>False</repetidor>
+<notas>
+<asignatura>Programación</asignatura>
+<nota>4</nota>
+<asignatura>Multimedia</asignatura>
+<nota>3</nota>
+</notas>
+</alumno>
+</curso>
+</instituto>

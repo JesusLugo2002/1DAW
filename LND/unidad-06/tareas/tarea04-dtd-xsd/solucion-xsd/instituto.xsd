@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.misitio.com" xmlns="http://www.misitio.com" elementFormDefault="qualified">
+    <xs:element name="instituto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="clase" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="alumno" maxOccurs="30">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre"/>
+                                        <xs:element name="apellidos"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="sexo" type="xs:string"/>
+                                    <xs:attribute name="cial" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="grupo" type="xs:string"/>
+                        <xs:attribute name="curso" type="xs:integer"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

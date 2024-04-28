@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE entrenamiento[
+    <!ELEMENT entrenamiento (cliente+,sesion*)>
+    <!ELEMENT cliente (nombre,apellido1,apellido2?)>
+    <!ATTLIST cliente 
+    idCliente ID #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido1 (#PCDATA)>
+    <!ELEMENT apellido2 (#PCDATA)>
+    <!ELEMENT sesion (duracion,distancia,localizacion,comentarios?)>
+    <!ATTLIST sesion 
+    fecha CDATA #IMPLIED
+    tipo (running | natación | bicicleta) "running"
+    pulsaciones CDATA #IMPLIED
+    refCliente IDREF #REQUIRED>
+    <!ELEMENT duracion (#PCDATA) >
+    <!ATTLIST duracion 
+    unidad (segundos|minutos|horas) "minutos">
+    <!ELEMENT distancia (#PCDATA)>
+    <!ATTLIST distancia 
+    unidad (kilometros|millas|vueltas) "kilometros">
+    <!ELEMENT localizacion (#PCDATA)>
+    <!ELEMENT comentarios (#PCDATA)>
+]>
+
+<entrenamiento>
+    <cliente idCliente="001">
+        <nombre>Jesús</nombre>
+        <apellido1>Lugo</apellido1>
+    </cliente>
+    <sesion fecha="23/11/2002" pulsaciones="120" refCliente="001">
+        <duracion>20</duracion>
+        <distancia>10</distancia>
+        <localizacion>Aguaclara</localizacion>
+        <comentarios>"¡QUIERO AGUA!"</comentarios>
+    </sesion>
+</entrenamiento>

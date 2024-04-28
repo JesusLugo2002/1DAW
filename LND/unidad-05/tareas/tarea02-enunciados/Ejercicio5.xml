@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE personas[
+    <!ELEMENT personas (persona+) >
+    <!ELEMENT persona (nombre,apellidos,nacimiento?,direccion+,(varon|mujer)) >
+    <!ELEMENT nombre (#PCDATA) >
+    <!ELEMENT apellidos (#PCDATA) >
+    <!ELEMENT nacimiento EMPTY >
+    <!ATTLIST nacimiento 
+    dia CDATA #REQUIRED
+    mes CDATA #REQUIRED
+    año CDATA #REQUIRED>
+    <!ELEMENT direccion (calle,poblacion,provincia,cpostal?) >
+    <!ELEMENT calle (#PCDATA) >
+    <!ELEMENT poblacion (#PCDATA) >
+    <!ELEMENT provincia (#PCDATA) >
+    <!ELEMENT cpostal (#PCDATA) >
+    <!ELEMENT varon EMPTY >
+    <!ELEMENT mujer EMPTY >
+]>
+
+<persona>
+    <nombre>Jesús</nombre>
+    <apellidos>Lugo</apellidos>
+    <nacimiento dia="23" mes="11" año="2002"></nacimiento>
+    <direccion>
+        <calle>45</calle>
+        <poblacion>Ciudad Gótica</poblacion>
+        <provincia>New York</provincia>
+        <cpostal>01020</cpostal>
+    </direccion>
+    <varon></varon>
+</persona>

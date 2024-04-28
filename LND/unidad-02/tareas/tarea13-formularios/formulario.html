@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio practico de Formulario</title>
+    <style>
+        legend {
+            border-color: black;
+            background-color: white;
+        }
+        label {
+            margin-right: 10px;
+            text-align: center;
+        }
+        .datos {
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>HOJA DE INSCRIPCIÓN</h1>
+        <h1>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+    </center>
+    <form>
+        <fieldset style="background-color: #cbcbcb;">
+            <legend>Datos personales</legend>
+            <div class="datos">
+                <label for="name">Nombre:</label><br> 
+                <input type="text" id="name" name="name"/>
+            </div>
+            <div class="datos">
+                <label for="lastname">Apellidos:</label><br>   
+                <input type="text" id="lastname" name="lastname"/>
+            </div>
+            <div class="datos">
+                <label for="dni">DNI:</label><br>
+                <input type="text" id="dni" name="dni"/>
+            </div>
+            <br><br><br> 
+            <div class="datos">
+                <label for="localidad">Localidad Nacimiento:</label><br>
+                <input type="text" id="localidad" name="localidad"/>
+            </div>
+            <div class="datos">
+                <label for="provincia">Provincia:</label><br>
+                <select id="provincia" name="provincia">
+                    <option value="provincia">- Selecciona -</option>
+                    <option value="provincia">Santa Cruz de Tenerife</option>
+                    <option value="provincia">Puerto de la Cruz</option>
+                    <option value="provincia">La Laguna</option>
+                    <option value="provincia">Costa Adeje</option>
+                    <option value="provincia">Los Cristianos</option>
+                </select>
+            </div>
+            <div class="datos">
+                <label for="fecha_nac">Fecha Nacimiento</label><br>
+                <input type="date" id="fecha_nac" name="fecha_nac"/>
+            </div>
+            <br><br><br>
+            <div class="datos">
+                <label for="direccion">Dirección:</label><br>
+                <input type="text" id="direccion" name="direccion" size="50%"/>
+            </div>
+            <div class="datos">
+                <label for="codigo_postal">Código postal:</label><br>
+                <input type="text" id="codigo_postal" name="codigo_postal"/>
+            </div>
+        </fieldset>
+        <fieldset style="background-color: #ffe3c3;">
+            <legend>Información de acceso</legend>
+            <input type="radio" id="access_type_direct" name="access_type">
+            <label for="access_type_direct">Direct</label> 
+            <ul style="list-style: none;">
+                <li><input type="radio" id="direct_type" name="direct_type"><label for="direct_type">Bachillerato LOGSE. Modalidad </label><input type="text" id="direct1" name="direct1"></li>
+                <li><input type="radio" id="direct_type" name="direct_type"><label for="direct_type">Bachillerato Experimental</label></li>
+                <li><input type="radio" id="direct_type" name="direct_type"><label for="direct_type">COU. Opción </label><input type="text" id="direct2" name="direct2"></li>
+                <li><input type="radio" id="direct_type" name="direct_type"><label for="direct_type">FP2</label></li>
+                <li><input type="radio" id="direct_type" name="direct_type"><label for="direct_type">Otros (especifique) </label><input type="text" id="direct3" name="direct3"></li>
+            </ul>
+            <input type="radio" id="access_type_free" name="access_type">
+            <label for="access_type_free">Prueba libre</label> 
+        </fieldset>
+        <fieldset style="background-color: #ef7f7e;">
+            <legend>Archivos adjuntados</legend>
+            <input type="checkbox" id="foto_dni" name="foto_dni">
+            <label for="foto_dni">Fotocopia DNI</label>
+            <input type="checkbox" id="cert_acad" name="cert_acad">
+            <label for="foto_dni">Certificado académico</label>
+            <br>
+            <input type="checkbox" id="otros_docs" name="otros_docs">  
+            <label for="foto_dni">Otros documentos (especifique)</label> 
+            <input type="text" id="otros_docs" name="otros_docs">         
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar Solicitud">
+    </form>
+</body>
+</html>

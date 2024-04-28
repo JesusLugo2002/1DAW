@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="Jesús Lugo"/>
+        <title>Cajas relativas absolutas</title>
+        <style type="text/css" >
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: gray;
+            }
+
+            h1 {
+                background-color: green;
+                color: white;
+                text-align: center;
+            }
+
+            #cabecera {
+                margin: 0 auto;
+                background-color: white;
+                width: 60%;
+                border: 3px solid yellow;
+            }
+
+            #cuerpo {
+                background-color: pink;
+            }
+
+            .caja {
+                width: 20%;
+                height: 100px;
+                background-color: gray;
+                border: 3px solid blue;
+            }
+
+            .caja:nth-child(2) {
+                background-color: red;
+            }
+
+            #pie {
+                background-color: white;
+                border: 3px dashed green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Prueba de posicionamiento </h1>
+        <div id="cabecera" >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <br/><br/>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div id="cuerpo" >
+            <div class="caja">
+                <h1>Caja 1</h1>
+            </div>
+
+            <div class="caja">
+                <h1>Caja 2</h1>
+            </div>
+
+            <div class="caja">
+                <h1>Caja 3</h1>
+            </div>
+
+            <div class="caja">
+                <h1>Caja 4</h1>
+            </div>
+            <div class="caja">
+                <h1>Caja 5</h1>
+            </div>
+
+            <div class="caja">
+                <h1>Caja 6</h1>
+            </div>
+
+        </div>
+        <div id="pie">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<neptuno>
+    <articulos>
+        <RefArticulo>10</RefArticulo>
+        <ReferenciaProveedor>100</ReferenciaProveedor>
+        <ReferenciaPedido>3</ReferenciaPedido>
+        <NombreArticulo>La Pepsi</NombreArticulo>
+        <NombreCategoria>Bebidas</NombreCategoria>
+        <PrecioUnidad>30</PrecioUnidad>
+        <UnidadesExistencia>40</UnidadesExistencia>
+    </articulos>
+    <clientes>
+        <RefCliente>1</RefCliente>
+        <ReferenciaPedido>3</ReferenciaPedido>
+        <NombreCliente>Juan</NombreCliente>
+        <DireccionCliente>Taco</DireccionCliente>
+        <CiudadCliente>París</CiudadCliente>
+        <CodPostalCliente>38206</CodPostalCliente>
+        <PaisCliente>Francia</PaisCliente>
+        <TelefornoCliente>6666666</TelefornoCliente>
+    </clientes>
+    <proveedores>
+        <ReferenciaProveedor>100</ReferenciaProveedor>
+        <NombreProveedor>David</NombreProveedor>
+        <PaisProveedor>Francia</PaisProveedor>
+    </proveedores>
+</neptuno>

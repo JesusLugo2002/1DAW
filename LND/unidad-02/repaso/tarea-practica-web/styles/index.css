@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: blue;
+    width: 100%;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(1, 1, 142);
+    display: block;
+}
+nav ul {
+    list-style: none;
+}

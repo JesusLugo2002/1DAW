@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE banco[
+    <!ELEMENT banco (cuenta+,cliente+,cuenta_cliente+) >
+    <!ELEMENT cuenta (saldo) >
+    <!ELEMENT saldo (#PCDATA) >
+    <!ELEMENT cliente (nombre,apellidos) >
+    <!ELEMENT nombre (#PCDATA) >
+    <!ELEMENT apellidos (#PCDATA) >
+    <!ELEMENT cuenta_cliente EMPTY >
+    <!ATTLIST cuenta_cliente 
+    id ID #REQUIRED
+    idcliente IDREF #REQUIRED
+    idcuenta IDREF #REQUIRED>
+    <!ATTLIST cliente 
+    id ID #REQUIRED>
+    <!ATTLIST cuenta 
+    id ID #REQUIRED 
+    interes CDATA #REQUIRED> 
+]>
+
+<banco>
+ <cuenta id="547" interes="0.5">
+    <saldo>5000</saldo>
+ </cuenta>
+ <cliente id="634">
+    <nombre>Sandra</nombre>
+    <apellidos>Martín</apellidos>
+ </cliente>
+ <cuenta_cliente id="001" idcliente="634" idcuenta="547"></cuenta_cliente>
+</banco>

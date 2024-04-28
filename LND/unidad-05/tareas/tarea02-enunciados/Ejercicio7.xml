@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE catalogoCursos[
+    <!ENTITY nn "Juan Luís De Todos Los Santos Ramón">
+    <!ELEMENT catalogoCursos (alumno+,profesor*,curso+, profesor_curso*, 
+    alumno_curso+) >
+    <!ELEMENT alumno (nombre,apellidos) >
+    <!ATTLIST alumno 
+    idAlumno ID #REQUIRED>
+    <!ELEMENT nombre (#PCDATA) >
+    <!ELEMENT apellidos (#PCDATA) >
+    <!ELEMENT profesor (nombre,apellidos) >
+    <!ATTLIST profesor 
+    idProfesor ID #REQUIRED>
+    <!ELEMENT curso (#PCDATA) >
+    <!ATTLIST curso 
+    idCurso ID #REQUIRED>
+    <!ELEMENT profesor_curso EMPTY >
+    <!ATTLIST profesor_curso 
+    refCurso IDREF #REQUIRED
+    refProfesor IDREF #REQUIRED
+    año CDATA #REQUIRED >
+    <!ELEMENT alumno_curso EMPTY >
+    <!ATTLIST alumno_curso 
+    refCurso IDREF #REQUIRED
+    refAlumno IDREF #REQUIRED
+    año CDATA #REQUIRED >
+]>
+
+<catalogoCursos>
+    <alumno idAlumno="001">
+        <nombre>Jesús</nombre>
+        <apellidos>Lugo</apellidos>
+    </alumno>
+    <profesor idProfesor="100">
+        <nombre>&nn;</nombre>
+        <apellidos>Robertillo</apellidos>
+    </profesor>
+    <curso idCurso="999">Desarrollo de aplicaciones web</curso>
+    <profesor_curso refCurso="999" refProfesor="100" año="2023"></profesor_curso>
+    <alumno_curso refCurso="999" refAlumno="001" año="2023"></alumno_curso>
+</catalogoCursos>
