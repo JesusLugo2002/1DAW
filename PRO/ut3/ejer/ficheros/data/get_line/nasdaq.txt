@@ -1,0 +1,100 @@
+Apple Inc
+Microsoft Corp
+Amazon.com Inc
+NVIDIA Corp
+Alphabet Inc
+Tesla Inc
+Meta Platforms Inc
+Broadcom Inc
+PepsiCo Inc
+Costco Wholesale Corp
+Cisco Systems Inc
+T-Mobile US Inc
+Adobe Inc
+Comcast Corp
+Netflix Inc
+Texas Instruments Inc
+QUALCOMM Inc
+Honeywell International Inc
+Amgen Inc
+Starbucks Corp
+Advanced Micro Devices Inc
+Intuit Inc
+Intel Corp
+Gilead Sciences Inc
+Applied Materials Inc
+Booking Holdings Inc
+PayPal Holdings Inc
+Automatic Data Processing Inc
+Mondelez International Inc
+Intuitive Surgical Inc
+Analog Devices Inc
+Vertex Pharmaceuticals Inc
+Regeneron Pharmaceuticals Inc
+Moderna Inc
+Micron Technology Inc
+Fiserv Inc
+Lam Research Corp
+CSX Corp
+MercadoLibre Inc
+Charter Communications Inc
+Activision Blizzard Inc
+ASML Holding NV
+KLA Corp
+Marriott International Inc/MD
+Synopsys Inc
+Monster Beverage Corp
+Cadence Design Systems Inc
+Keurig Dr Pepper Inc
+Pinduoduo Inc ADR
+Kraft Heinz Co/The
+Palo Alto Networks Inc
+O'Reilly Automotive Inc
+American Electric Power Co Inc
+NXP Semiconductors NV
+Airbnb Inc
+Autodesk Inc
+Cintas Corp
+Microchip Technology Inc
+Biogen Inc
+Ross Stores Inc
+Exelon Corp
+Dexcom Inc
+Fortinet Inc
+Paychex Inc
+IDEXX Laboratories Inc
+AstraZeneca PLC ADR
+PACCAR Inc
+Lululemon Athletica Inc
+Marvell Technology Inc
+Xcel Energy Inc
+Old Dominion Freight Line Inc
+Warner Bros Discovery Inc
+Workday Inc
+Electronic Arts Inc
+Cognizant Technology Solutions Corp
+Illumina Inc
+Dollar Tree Inc
+GLOBALFOUNDRIES Inc
+Walgreens Boots Alliance Inc
+Copart Inc
+CoStar Group Inc
+Baker Hughes Co
+JD.com Inc ADR
+Fastenal Co
+Enphase Energy Inc
+Constellation Energy Corp
+Verisk Analytics Inc
+eBay Inc
+Diamondback Energy Inc
+Seagen Inc
+Atlassian Corp
+ANSYS Inc
+Sirius XM Holdings Inc
+Crowdstrike Holdings Inc
+Datadog Inc
+Lucid Group Inc
+Align Technology Inc
+Zscaler Inc
+Zoom Video Communications Inc
+Rivian Automotive Inc

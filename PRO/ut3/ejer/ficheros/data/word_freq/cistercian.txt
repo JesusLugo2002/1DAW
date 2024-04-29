@@ -1,0 +1,9 @@
+Cistercian numerals were invented by the Cistercian order of monks in the 13th century Giuseppe Frisella explains how the notation system works
+
+A vertical straight line acts as an axis dividing the plane into four quadrants each one representing one of the four digits the upper right quadrant for the units the upper left quadrant for the tens the lower right quadrant for the hundreds and the lower left quadrant for the thousands
+
+What this does well indeed better than the roman or Arabic numeral systems it is related to is to represent both small and large numbers 1 up to 9999 in a single glyph What it does not do well compared to roman or Arabic systems is allow you to reduce operations on large numbers to operations on smaller ones There is no long division in other words and even addition and multiplication are not very straightforward
+
+So you might think about this as a kind of mathematical compression system optimizing for storage rather than operations If you just need to record a number say a four-digit year you can do it quickly and in a minimum amount of space in the Cistercian system If you need to do bookkeeping then the Arabic numerals are probably what you want
+
+But if you have read this far you are probably thinking what I usually think anytime I encounter something a little strange in the world of mathematical notation what about aliens One can imagine an alien species that can easily do simple arithmetic operations on what they would call small numbers less than 10000 in their heads or has offloaded such tasks to machine and which would correspondingly value the storage and computational efficiency of a system of numbers like this Maybe Cistercian numerals rather than the clumsy digits of our intellectual infancy will be the best way to make ourselves understood when first contact begins
