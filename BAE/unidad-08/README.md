@@ -6,10 +6,15 @@
 
 ## Índice
 
+- [Introducción](#introducción)
 - [Procedimientos](#procedimientos)
 - [Funciones](#funciones)
 - [Cursores](#cursores)
 - [Triggers](#triggers)
+
+## Introducción
+
+Aquí toda la mondá de BAE y la programación en MySql.
 
 ## Procedimientos
 
