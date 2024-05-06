@@ -34,6 +34,7 @@ DECLARE nombre_variable tipo_variable [DEFAULT valor];
 ```
 
 ---
+
 - __IF-ELSE:__
 ```sql
 IF condicion THEN
