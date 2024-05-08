@@ -15,8 +15,8 @@ header div {
     transform: translate(-50%, -50%);
 }
 
-header .title {
-    text-align: center;
+.title {
+    letter-spacing: 2px;
 }
 
 .button {
