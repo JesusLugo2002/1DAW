@@ -210,11 +210,42 @@ call calcular_salario_anual();
 3. Escribe un procedimiento almacenado que cuente y muestre el número de empleados en cada rango de salario (por ejemplo, menos de 3000, entre 3000 y 5000, más de 5000). El procedimiento debe tener parámetros de entrada.
 
 ```sql
+DELIMITER //
+CREATE PROCEDURE rango_salario(IN limite_minimo DECIMAL(10,2), IN limite_maximo DECIMAL(10,2))
+BEGIN
+  DECLARE done INT DEFAULT FALSE;
+  DECLARE emp_count INT DEFAULT 0;
+  DECLARE emp_salario DECIMAL(10, 2);
+  DECLARE cur CURSOR FOR SELECT salario FROM empleados;
+  DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
 
+  OPEN cur;
+  read_loop: LOOP
+    FETCH cur INTO emp_salario;
+    IF done THEN
+      LEAVE read_loop;
+    END IF;
+    IF emp_salario >= limite_minimo AND emp_salario <= limite_maximo THEN
+      SET emp_count = emp_count + 1;    
+    END IF;
+  END LOOP;
+  CLOSE cur;
+
+  SELECT emp_count AS resultado;
+END //
+DELIMITER ;
 ```
 
 #### Comprobación
 
+```sql
+call rango_salario(1000, 3500);
 
++-----------+
+| resultado |
++-----------+
+|         3 |
++-----------+
+```
 
 </div>
