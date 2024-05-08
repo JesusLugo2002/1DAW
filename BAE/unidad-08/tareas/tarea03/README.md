@@ -182,7 +182,39 @@ select * from empleados;
 ```
 
 2. Escribe un procedimiento almacenado que calcule el salario anual de cada empleado (asumiendo que trabajan todo el año) y lo imprima.
+
+```sql
+DROP PROCEDURE IF EXISTS calcular_salario_anual;
+DELIMITER //
+CREATE PROCEDURE calcular_salario_anual()
+BEGIN
+  SELECT id, nombre, salario * 12 as salario_anual from empleados;
+END //
+DELIMITER ;
+```
+
+#### Comprobación 
+
+```sql
+call calcular_salario_anual();
+
++----+--------+---------------+
+| id | nombre | salario_anual |
++----+--------+---------------+
+|  1 | Juan   |      36000.00 |
+|  2 | María  |      42000.00 |
+|  3 | Pedro  |      38400.00 |
++----+--------+---------------+
+```
+
 3. Escribe un procedimiento almacenado que cuente y muestre el número de empleados en cada rango de salario (por ejemplo, menos de 3000, entre 3000 y 5000, más de 5000). El procedimiento debe tener parámetros de entrada.
+
+```sql
+
+```
+
+#### Comprobación
+
 
 
 </div>
