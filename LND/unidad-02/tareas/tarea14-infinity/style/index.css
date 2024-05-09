@@ -53,6 +53,7 @@ main {
     top: 50px;
     bottom: 0;
     background-image: url(../img/main-bg.gif);
+    background-size: cover;
 }
 
 footer {
