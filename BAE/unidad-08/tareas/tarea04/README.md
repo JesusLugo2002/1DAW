@@ -1,3 +1,11 @@
+# Tarea 04 - Cursores en procedimientos
+
+<div align=center>
+  <img src="../../../../images/patricio.gif" alt="pez" width="50%"/>
+
+  _Pez de la buena suerte (¡regresó!)_
+</div>
+
 <div align="justify">
 
 # Trabajo con cursores la BBDD Empleados
@@ -268,13 +276,34 @@ BEGIN
         IF done THEN
             LEAVE read_loop;
         END IF; 
-        DELETE FROM empleados WHERE id = emp_id;
+        UPDATE empleados SET salario = salario + (salario * 0.2) WHERE id = emp_id;
     END LOOP;
     CLOSE cur;
 END //
 DELIMITER ;
 ```
 
+#### Comprobación
 
+```sql
+select * from empleados;
++----+--------+---------+
+| id | nombre | salario |
++----+--------+---------+
+|  1 | Juan   | 3300.00 |
+|  2 | María  | 3850.00 |
+|  3 | Pedro  | 3200.00 |
++----+--------+---------+
 
+call aumentar_salario_empleado_especifico("María");
+
+select * from empleados;
++----+--------+---------+
+| id | nombre | salario |
++----+--------+---------+
+|  1 | Juan   | 3300.00 |
+|  2 | María  | 4620.00 |
+|  3 | Pedro  | 3200.00 |
++----+--------+---------+
+```
 </div>
