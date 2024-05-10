@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Undertale Font";
+    src: url(DeterminationSansWebRegular-369X.ttf);
+}
+
+body {
+    background-image: url(../img/main-bg.gif);
+    background-size: cover;
+}
+
+main {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+    top: 50px;
+    background-color: #030a0e;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    font-family: "Undertale Font";
+    font-size: 50px;
+    text-decoration-line: underline;
+    cursor: default;
+}
+
+.container {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: justify;
+}
