@@ -1,4 +1,5 @@
 import pytest
+
 from infinite_list import InfiniteList
 
 INFLIST1_VALUES = (10, 20, 30, 40, 50)
