@@ -37,11 +37,11 @@ class Card:
         - self.suit deberá almacenar el palo de la carta '♣◆❤♠'.
         - self.value deberá almacenar el valor de la carta (1-13)'''
         if suit not in Card.SUITS:
-            raise InvalidCardError(f"🃏 Invalid card: {repr(suit)} is not a supported suit")
+            raise InvalidCardError(f"{repr(suit)} is not a supported suit")
         if isinstance(value, str):
-            raise InvalidCardError(f"🃏 Invalid card: {repr(value)} is not a supported symbol")
+            raise InvalidCardError(f"{repr(value)} is not a supported symbol")
         if not Card.A_VALUE <= value <= Card.K_VALUE:
-            raise InvalidCardError(f"🃏 Invalid card: {repr(value)} is not a supported value")
+            raise InvalidCardError(f"{repr(value)} is not a supported value")
         self.value = value
         self.suit = suit
 
@@ -49,34 +49,37 @@ class Card:
     def cmp_value(self) -> int:
         '''Devuelve el valor (numérico) de la carta para comparar con otras.
         Tener en cuenta el AS.'''
-        return Card.SYMBOLS.index()
+        return self.value if self.value != Card.A_VALUE else Card.K_VALUE + 1   
 
     def __repr__(self):
         '''Devuelve el glifo de la carta'''
-        return Card.GLYPHS[self.suit][self.cmp_value - 1]
+        return Card.GLYPHS[self.suit][self.value - 1]
 
     def __eq__(self, other: Card | object):
         '''Indica si dos cartas son iguales'''
-        ...
+        return self.suit == other.suit and self.cmp_value == other.cmp_value
 
     def __lt__(self, other: Card):
         '''Indica si una carta vale menos que otra'''
-        ...
+        return self.cmp_value < other.cmp_value 
 
     def __gt__(self, other: Card):
         '''Indica si una carta vale más que otra'''
-        ...
+        return self.cmp_value > other.cmp_value 
 
     def __add__(self, other: Card) -> Card:
         '''Suma de dos cartas:
         1. El nuevo palo será el de la carta más alta.
         2. El nuevo valor será la suma de los valores de las cartas. Si valor pasa
         de 13 se convertirá en un AS.'''
-        ...
+        new_suit = self.suit if self.cmp_value > other.cmp_value else other.suit
+        values_sum = self.cmp_value + other.cmp_value
+        new_value = values_sum if values_sum <= Card.K_VALUE else Card.A_VALUE
+        return Card(new_value, new_suit)
 
     def is_ace(self) -> bool:
         '''Indica si una carta es un AS'''
-        ...
+        return self.value == Card.A_VALUE
 
     @classmethod
     def get_available_suits(cls) -> str:
@@ -86,12 +89,14 @@ class Card:
     @classmethod
     def get_cards_by_suit(cls, suit: str):
         '''Función generadora que devuelve los glifos de las cartas por su palo'''
-        ...
+        for glyph in Card.GLYPHS[suit]:
+            yield glyph
 
 
 class InvalidCardError(Exception):
     '''Clase que representa un error de carta inválida.
     - El mensaje por defecto de esta excepción debe ser: 🃏 Invalid card
     - Si se añaden otros mensajes aparecerán como: 🃏 Invalid card: El mensaje que sea'''
-
-    ...
+    def __init__(self, message = None, *, base = '🃏 Invalid card'):
+        err_info = f'{base}' if message == None else f'{base}: {message}'
+        super().__init__(err_info)
