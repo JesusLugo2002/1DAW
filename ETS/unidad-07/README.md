@@ -45,6 +45,7 @@ __Explicación__: [BettaTech - Factory | PATRONES de DISEÑO](https://www.youtub
 
 <div align=center>
     <strong>Estructura del patrón "Factory"</strong>
+    <br>
     <img src="./img/factory-patron-structure.png" alt="structure" width="70%"/>
 </div>
 
