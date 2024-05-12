@@ -44,7 +44,8 @@ Es un patrón de diseño creacional que proporciona una interfaz para crear obje
 __Explicación__: [BettaTech - Factory | PATRONES de DISEÑO](https://www.youtube.com/watch?v=lLvYAzXO7Ek)
 
 <div align=center>
-    <img src="/img/factory-patron-structure.png" alt="structure" width="70%"/>
+    <strong>Estructura del patrón "Factory"</strong>
+    <img src="./img/factory-patron-structure.png" alt="structure" width="70%"/>
 </div>
 
 ### Patrones estructurales
