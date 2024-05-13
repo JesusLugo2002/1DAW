@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Jesús Daniel Lugo López"/>
+        <title>De tabla a texto</title>
+        
+        <style type="text/css">
+            body, * {
+                margin: 0 auto;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .calificaciones-desktop{
+                width: fit-content;
+                margin-top: 5px;
+                background-color: rgb(172, 224, 172);
+                border: inset 10px gray;
+            }
+            .calificaciones-mobile {
+                margin-top: 5px;
+                background-color: rgb(172, 224, 172);
+                border: inset 3px gray;
+                display: none;
+                width: fit-content;
+            }
+            .calificaciones-mobile .fila .columna {
+                display: flex;
+            }
+            .calificaciones-mobile .fila .columna .header, 
+            .calificaciones-mobile .fila .columna .contenido {
+                border: 1px solid #909090;
+                border-bottom: none;
+                padding: 10px;
+            }
+            .calificaciones-mobile .fila .columna .header {
+                font-weight: bold;
+                width: 40%;
+                border-right: none;
+            }
+            .calificaciones-mobile .fila .columna .contenido {
+                width: 60%;
+                border-left: none;
+            }
+
+            .calificaciones-mobile .fila:nth-of-type(odd) {
+                background-color: rgb(197, 77, 77);
+            }
+            @media (max-width: 800px) {
+                .calificaciones-mobile {display: block;}
+                .calificaciones-desktop {display: none;}
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1px" class="calificaciones-desktop">
+            <tr>
+                <th> Nombre</th> <th> Apellido1</th> <th> Apellido2 </th> <th> LND </th> <th> BAE </th> <th> PRO </th>
+            </tr>
+            <tr>
+                <td> María Cristina</td> <td> Martínez</td> <td> Abellanosa</td><td> 8.25 </td> <td> 7.25 </td> <td> 6.25 </td>
+            </tr>
+            <tr>
+                <td> Sara</td> <td> Delgado</td> <td>Alemán </td><td> 9.25 </td> <td> 9.25 </td> <td> 7.25 </td>
+            </tr>
+            <tr>
+                <td> Lidia Ángeles</td> <td> González</td> <td> García</td><td> 9.99 </td> <td> 9.88 </td> <td> 8.25 </td>
+            </tr>
+        </table>
+        
+        <div class="calificaciones-mobile">
+            <div class="fila">
+                <div class="columna">
+                    <div class="header">Nombre:</div>
+                    <div class="contenido">María Cristina</div>
+                </div>
+                <div class="columna">
+                    <div class="header">Apellido1:</div>
+                    <div class="contenido">Martínez</div>
+                </div>
+                <div class="columna">
+                    <div class="header">Apellido2:</div>
+                    <div class="contenido">Abellanosa</div>
+                </div>
+                <div class="columna">
+                    <div class="header">LND:</div>
+                    <div class="contenido">8.25</div>
+                </div>
+                <div class="columna">
+                    <div class="header">BAE:</div>
+                    <div class="contenido">7.25</div>
+                </div>
+                <div class="columna">
+                    <div class="header">PRO:</div>
+                    <div class="contenido">6.25</div>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="columna">
+                    <div class="header">Nombre:</div>
+                    <div class="contenido">Sara</div>
+                </div>
+                <div class="columna">
+                    <div class="header">Apellido1:</div>
+                    <div class="contenido">Delgado</div>
+                </div>
+                <div class="columna">
+                    <div class="header">Apellido2:</div>
+                    <div class="contenido">Alemán</div>
+                </div>
+                <div class="columna">
+                    <div class="header">LND:</div>
+                    <div class="contenido">9.25</div>
+                </div>
+                <div class="columna">
+                    <div class="header">BAE:</div>
+                    <div class="contenido">9.25</div>
+                </div>
+                <div class="columna">
+                    <div class="header">PRO:</div>
+                    <div class="contenido">7.25</div>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="columna">
+                    <div class="header">Nombre:</div>
+                    <div class="contenido">Lidia Ángeles</div>
+                </div>
+                <div class="columna">
+                    <div class="header">Apellido1:</div>
+                    <div class="contenido">González</div>
+                </div>
+                <div class="columna">
+                    <div class="header">Apellido2:</div>
+                    <div class="contenido">García</div>
+                </div>
+                <div class="columna">
+                    <div class="header">LND:</div>
+                    <div class="contenido">9.99</div>
+                </div>
+                <div class="columna">
+                    <div class="header">BAE:</div>
+                    <div class="contenido">9.88</div>
+                </div>
+                <div class="columna">
+                    <div class="header">PRO:</div>
+                    <div class="contenido">8.25</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
