@@ -6,16 +6,16 @@
 body {
     background-image: url(../img/main-bg.gif);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 main {
     font-family: sans-serif;
     position: absolute;
     width: 80%;
+    height: 100%;
     left: 50%;
     transform: translate(-50%, 0);
-    bottom: 0;
-    top: 50px;
     background-color: #030a0e;
     color: white;
 }
@@ -30,15 +30,8 @@ main {
 
 .container {
     position: absolute;
-    width: 80%;
+    width: 60%;
     left: 50%;
     transform: translate(-50%, 0);
     text-align: justify;
-}
-
-section {
-    padding: 10px 20px 10px 20px;
-    margin: 10px 20px 10px 20px;
-    background-color: #0a2230;
-    border-radius: 20px;
 }
