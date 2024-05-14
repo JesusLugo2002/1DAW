@@ -200,12 +200,84 @@ select * from empleados;
 
 __Respuesta__:
 ```sql
--- No sé qué hacer acá.
+DROP PROCEDURE IF EXISTS nombres_aleatorios_order_rand;
+DELIMITER //
+CREATE PROCEDURE nombres_aleatorios_order_rand(IN prefix VARCHAR(50), input_rows INT, base_salary INT, max_salary INT)
+BEGIN
+    DECLARE counter INT DEFAULT 0;
+    CREATE TEMPORARY TABLE sub (num INT);
+    WHILE counter < input_rows DO
+        INSERT INTO sub values (counter);
+        SET counter = counter + 1;
+    END WHILE;
+
+    INSERT INTO empleados (nombre, salario)
+    SELECT CONCAT(prefix, RAND()), FLOOR(RAND() * (max_salary - base_salary + 1)) + base_salary
+    FROM sub
+    ORDER BY RAND()
+    LIMIT input_rows;
+END //
+DELIMITER ;
 ```
 
 __Comprobación__:
 ```sql
--- Como dije antes, no sé qué mondá hacer.
+select * from empleados;
++----+-----------------------------+---------+
+| id | nombre                      | salario |
++----+-----------------------------+---------+
+|  1 | Juan                        | 3000.00 |
+|  2 | María                       | 3500.00 |
+|  3 | Pedro                       | 3200.00 |
+|  4 | Empleado0.4406885899982309  | 5820.00 |
+|  5 | Empleado0.6944879076392277  | 1375.00 |
+|  6 | Empleado0.22907321176405365 | 6748.00 |
+|  7 | Empleado0.10200013136677456 | 4819.00 |
+|  8 | Empleado0.8763438666950388  | 3834.00 |
+| 12 | TestUser3002705208          | 5343.00 |
+| 13 | TestUser3002819821          | 9974.00 |
+| 14 | TestUser3002916457          | 7836.00 |
+| 15 | 080027077231                | 3972.00 |
+| 16 | 080027077231                | 2296.00 |
+| 17 | 080027077231                | 3564.00 |
+| 18 | 080027077231                | 2931.00 |
+| 19 | Empleado0.40540353712197724 | 5243.00 |
+| 20 | Empleado0.6555866465490187  | 7245.00 |
+| 21 | Empleado0.9057697559760601  | 9247.00 |
+| 22 | Empleado0.15595286540310166 | 3247.00 |
+| 23 | Empleado0.40613597483014313 | 5249.00 |
+| 24 | Empleado0.6563190842571847  | 7251.00 |
++----+-----------------------------+---------+
+
+call nombres_aleatorios_order_rand("Orden", 2, 2000, 5000);
+
++----+-----------------------------+---------+
+| id | nombre                      | salario |
++----+-----------------------------+---------+
+|  1 | Juan                        | 3000.00 |
+|  2 | María                       | 3500.00 |
+|  3 | Pedro                       | 3200.00 |
+|  4 | Empleado0.4406885899982309  | 5820.00 |
+|  5 | Empleado0.6944879076392277  | 1375.00 |
+|  6 | Empleado0.22907321176405365 | 6748.00 |
+|  7 | Empleado0.10200013136677456 | 4819.00 |
+|  8 | Empleado0.8763438666950388  | 3834.00 |
+| 12 | TestUser3002705208          | 5343.00 |
+| 13 | TestUser3002819821          | 9974.00 |
+| 14 | TestUser3002916457          | 7836.00 |
+| 15 | 080027077231                | 3972.00 |
+| 16 | 080027077231                | 2296.00 |
+| 17 | 080027077231                | 3564.00 |
+| 18 | 080027077231                | 2931.00 |
+| 19 | Empleado0.40540353712197724 | 5243.00 |
+| 20 | Empleado0.6555866465490187  | 7245.00 |
+| 21 | Empleado0.9057697559760601  | 9247.00 |
+| 22 | Empleado0.15595286540310166 | 3247.00 |
+| 23 | Empleado0.40613597483014313 | 5249.00 |
+| 24 | Empleado0.6563190842571847  | 7251.00 |
+| 25 | Orden0.506818432832899      | 2679.00 |
+| 26 | Orden0.7839713103919954     | 3673.00 |
++----+-----------------------------+---------+
 ```
 
 ## Ejercicio 04
