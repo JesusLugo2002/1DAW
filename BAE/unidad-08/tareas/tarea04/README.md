@@ -8,7 +8,12 @@
 
 <div align="justify">
 
-# Trabajo con cursores la BBDD Empleados
+## Índice
+
+- [Bases dadas por el docente](#bases-dadas-por-el-docente)
+- [Procedimientos a crear](#procedimientos-a-crear)
+
+## Trabajo con cursores la BBDD Empleados
 
 La base de datos de __"empleados"__ es un sistema diseñado para gestionar información relacionada con los empleados de una empresa. Esta base de datos está estructurada en torno a la entidad principal "empleados", que contiene información detallada sobre cada empleado. La estructura de la base de datos se compone de una única tabla principal llamada "empleados".
 
@@ -58,7 +63,7 @@ BEGIN
     DECLARE done INT DEFAULT FALSE;
     DECLARE emp_id INT;
     DECLARE emp_nombre VARCHAR(100);
-    DECLARE emp_salario DECIMAL(10,2);
+    DECLARE emp_salario DECIMAL(10, 2);
     DECLARE cur CURSOR FOR SELECT id, nombre, salario FROM empleados WHERE salario > 3000;
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
 
