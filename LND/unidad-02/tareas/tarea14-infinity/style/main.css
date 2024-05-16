@@ -12,12 +12,20 @@ body {
 main {
     font-family: sans-serif;
     position: absolute;
-    width: 80%;
-    height: 100%;
+    height: 100vh;
+    width: 80vw;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: #030a0e;
     color: white;
+}
+
+.color-bg {
+    position: fixed;
+    height: 100vh;
+    width: 80vw;
+    background-color: #030a0e;
+    transform: translate(-50%, 0);
+    left: 50%;
 }
 
 .title {
@@ -92,3 +100,10 @@ main {
     opacity: 0;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #030a0e;
+}
