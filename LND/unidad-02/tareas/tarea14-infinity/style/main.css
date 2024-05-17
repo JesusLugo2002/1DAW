@@ -4,11 +4,50 @@
 }
 
 body {
+    margin: 0px;
     background-image: url(../img/main-bg.gif);
     background-size: cover;
     background-attachment: fixed;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #030a0e;
+    z-index: 999;
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar a {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    padding-right: 20px;
+}
+
+.navbar ul a:hover {
+    color: rgb(192, 176, 156);
+    text-decoration-line: underline;
+}
+
+.navbar h1 a {
+    font-family: "Undertale Font";
+    padding-right: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
 
 main {
     font-family: sans-serif;
@@ -55,17 +94,52 @@ main {
     left: 50%;
     transform: translate(-50%, 0);
     text-align: justify;
+    padding-bottom: 100px;
 }
 
-form {
-    margin-bottom: 100px;
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #030a0e;
 }
+
+.icons-container {
+    color: white;
+    height: 100%;
+}
+
+.icons-container td {
+    text-align: center;
+    width: 50px;
+    transition: 0.3s;
+}
+
+.icons-container td:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* About Me */
+
+form {
+    border: 1px solid white;
+    padding: 50px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+/* Main Project */
 
 q {
     font-style: italic;
 }
-
-/* Main Project */
 
 .main-project-gallery {
     display: grid;
@@ -82,6 +156,7 @@ q {
     border: 1px solid white;
     transition: 0.3s;
     text-align: center;
+    cursor: pointer;
 }
 
 .main-project-gallery .item:hover {
@@ -112,6 +187,7 @@ q {
     border: 1px solid white;
     background-color: #030a0e;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .projects-gallery .item a {
@@ -147,12 +223,4 @@ q {
 
 .projects-gallery .item:hover img {
     opacity: 0;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
-    background-color: #030a0e;
 }
