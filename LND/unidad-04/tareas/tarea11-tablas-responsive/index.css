@@ -1,0 +1,77 @@
+.body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TABLA DESKTOP */
+
+.tabla-desktop {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-desktop tr th {
+    background-color: #303030;
+    color: white;
+    border: 1px solid #909090;
+    padding: 5px;
+    text-align: left;
+}
+
+.tabla-desktop tr td {
+    border: 1px solid #909090;
+    padding: 5px;
+}
+
+.tabla-desktop tr:nth-of-type(odd) {
+    background-color: #e6e6e6;
+}
+
+/* TABLA MOBILE */
+
+.tabla-mobile {
+    display: none;
+    width: 100%;
+}
+
+.tabla-mobile .fila .columna {
+    display: flex;
+}
+
+.tabla-mobile .fila .columna .header, 
+.tabla-mobile .fila .columna .contenido {
+    border: 1px solid #909090;
+    border-bottom: none;
+    padding: 10px;
+}
+
+.tabla-mobile .fila .columna .header {
+    width: 40%;
+    background-color: #303030;
+    color: white;
+    font-weight: bold;
+}
+
+.tabla-mobile .fila .columna .contenido {
+    width: 60%;
+}
+
+.tabla-mobile .fila:nth-of-type(even) .columna .contenido {
+    background-color: #e6e6e6;
+}
+
+.tabla-mobile .fila .columna:last-of-type .contenido, 
+.tabla-mobile .fila .columna:last-of-type .header {
+    border-bottom: 1px solid #909090;
+}
+
+@media (max-width: 768px) {
+    .tabla-mobile {
+        display: block;
+    }
+
+    .tabla-desktop {
+        display: none;
+    }
+}
