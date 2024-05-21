@@ -72,7 +72,7 @@ BEGIN
   SET caracter_nombre = SUBSTRING(nombre, 1, 1);
   SET caracteres_apellido1 = SUBSTRING(apellido1, 1, 3);
   SET caracteres_apellido2 = SUBSTRING(apellido2, 1, 3);
-  RETURN LCASE(CONCAT(caracter_nombre, caracteres_apellido1, caracteres_apellido2, '@', dominio));
+  RETURN eliminar_acentos(LCASE(CONCAT(caracter_nombre, caracteres_apellido1, caracteres_apellido2, '@', dominio)));
 END //
 DELIMITER ;
 ```
