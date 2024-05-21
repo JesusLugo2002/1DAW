@@ -28,6 +28,15 @@ __Solución:__
 DROP DATABASE IF EXISTS test;
 CREATE DATABASE test;
 USE test;
+
+-- Creación de la tabla "Alumnos"
+CREATE TABLE alumnos (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(100),
+  apellido1 VARCHAR(50),
+  apellido2 VARCHAR(50),
+  email VARCHAR(100)
+);
 ```
 
 1. Escribe una función llamado __crear_email__ que dados los parámetros de entrada: __nombre, apellido1, apellido2 y dominio__, cree una dirección de email y la devuelva como salida.
@@ -50,6 +59,24 @@ El email devuelve una dirección de correo electrónico con el siguiente formato
 - El dominio pasado como parámetro.
 - La dirección de email debe estar en minúsculas.
 
+__Solución:__
+```sql
+DROP FUNCTION IF EXISTS crear_email;
+DELIMITER //
+CREATE FUNCTION crear_email(nombre VARCHAR(100), apellido1 VARCHAR(50), apellido2 VARCHAR(50), dominio VARCHAR(50)) RETURNS VARCHAR(100) DETERMINISTIC
+BEGIN
+  DECLARE caracter_nombre CHAR;
+  DECLARE caracteres_apellido1 CHAR;
+  DECLARE caracteres_apellido2 CHAR;
+
+  SET caracter_nombre = SUBSTRING(nombre, 1, 1);
+  SET caracteres_apellido1 = SUBSTRING(apellido1, 1, 3);
+  SET caracteres_apellido2 = SUBSTRING(apellido2, 1, 3);
+  RETURN LCASE(CONCAT(caracter_nombre, caracteres_apellido1, caracteres_apellido2, '@', dominio));
+END //
+DELIMITER ;
+```
+
 - También crea una función llamada __eliminar_acentos__ que reciba una cadena de caracteres y devuelva la misma cadena sin acentos. La función tendrá que reemplazar todas las vocales que tengan acento por la misma vocal pero sin acento. Por ejemplo, si la función recibe como parámetro de entrada la cadena María la función debe devolver la cadena Maria.
 
 - Función: eliminar_acentos
@@ -59,6 +86,23 @@ El email devuelve una dirección de correo electrónico con el siguiente formato
     - (cadena de caracteres)
 
 > ___La función crear_email deberá hacer uso de la función eliminar_acentos___.
+
+__Función "eliminar_acentos"__:
+```sql
+DROP FUNCTION IF EXISTS eliminar_acentos;
+DELIMITER //
+CREATE FUNCTION eliminar_acentos(cadena VARCHAR(100)) RETURNS VARCHAR(100) DETERMINISTIC
+BEGIN
+  DECLARE nueva_cadena VARCHAR(100);
+  SET nueva_cadena = REPLACE(cadena, 'á', 'a');
+  SET nueva_cadena = REPLACE(nueva_cadena, 'é', 'e');
+  SET nueva_cadena = REPLACE(nueva_cadena, 'í', 'i');
+  SET nueva_cadena = REPLACE(nueva_cadena, 'ó', 'o');
+  SET nueva_cadena = REPLACE(nueva_cadena, 'ú', 'u');
+  RETURN nueva_cadena;
+END //
+DELIMITER ;
+```
 
 Una vez creada la tabla escriba un trigger con las siguientes características:
 
