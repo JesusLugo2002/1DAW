@@ -8,8 +8,6 @@
 
 <div align="justify">
 
-<div align="justify">
-
 ## Trabajo con la BBDD Alumnos
 
 Crea una base de datos llamada test que contenga una tabla llamada alumnos con las siguientes columnas:
@@ -22,7 +20,7 @@ Crea una base de datos llamada test que contenga una tabla llamada alumnos con l
   - apellido2 (cadena de caracteres)
   - email (cadena de caracteres)
  
-__Solución:__
+__Creación de bases de datos y la tabla 'Alumnos'__:
 ```sql
 -- Creación de la base de datos
 DROP DATABASE IF EXISTS test;
@@ -59,24 +57,6 @@ El email devuelve una dirección de correo electrónico con el siguiente formato
 - El dominio pasado como parámetro.
 - La dirección de email debe estar en minúsculas.
 
-__Solución:__
-```sql
-DROP FUNCTION IF EXISTS crear_email;
-DELIMITER //
-CREATE FUNCTION crear_email(nombre VARCHAR(100), apellido1 VARCHAR(50), apellido2 VARCHAR(50), dominio VARCHAR(50)) RETURNS VARCHAR(100) DETERMINISTIC
-BEGIN
-  DECLARE caracter_nombre CHAR;
-  DECLARE caracteres_apellido1 CHAR;
-  DECLARE caracteres_apellido2 CHAR;
-
-  SET caracter_nombre = SUBSTRING(nombre, 1, 1);
-  SET caracteres_apellido1 = SUBSTRING(apellido1, 1, 3);
-  SET caracteres_apellido2 = SUBSTRING(apellido2, 1, 3);
-  RETURN eliminar_acentos(LCASE(CONCAT(caracter_nombre, caracteres_apellido1, caracteres_apellido2, '@', dominio)));
-END //
-DELIMITER ;
-```
-
 - También crea una función llamada __eliminar_acentos__ que reciba una cadena de caracteres y devuelva la misma cadena sin acentos. La función tendrá que reemplazar todas las vocales que tengan acento por la misma vocal pero sin acento. Por ejemplo, si la función recibe como parámetro de entrada la cadena María la función debe devolver la cadena Maria.
 
 - Función: eliminar_acentos
@@ -104,22 +84,73 @@ END //
 DELIMITER ;
 ```
 
+__Función "crear_email":__
+```sql
+DROP FUNCTION IF EXISTS crear_email;
+DELIMITER //
+CREATE FUNCTION crear_email(nombre VARCHAR(100), apellido1 VARCHAR(50), apellido2 VARCHAR(50), dominio VARCHAR(50)) RETURNS VARCHAR(100) DETERMINISTIC
+BEGIN
+  DECLARE caracter_nombre CHAR;
+  DECLARE caracteres_apellido1 CHAR;
+  DECLARE caracteres_apellido2 CHAR;
+
+  SET caracter_nombre = SUBSTRING(nombre, 1, 1);
+  SET caracteres_apellido1 = SUBSTRING(apellido1, 1, 3);
+  SET caracteres_apellido2 = SUBSTRING(apellido2, 1, 3);
+  RETURN eliminar_acentos(LCASE(CONCAT(caracter_nombre, caracteres_apellido1, caracteres_apellido2, '@', dominio)));
+END //
+DELIMITER ;
+```
+
 Una vez creada la tabla escriba un trigger con las siguientes características:
 
 - Trigger:
   - __trigger_crear_email_before_insert__. Se ejecuta sobre la tabla alumnos. Se ejecuta antes de una operación de inserción.Si el nuevo valor del email que se quiere insertar es NULL, entonces se le creará automáticamente una dirección de email y se insertará en la tabla. Si el nuevo valor del email no es NULL se guardará en la tabla el valor del email.
-
 >__Nota__: Para crear la nueva dirección de email se deberá hacer uso del procedimiento crear_email.
+
+__Trigger "crear_email_before_insert"__:
+```sql
+DROP TRIGGER IF EXISTS crear_email_before_insert;
+DELIMITER //
+CREATE TRIGGER crear_email_before_insert
+BEFORE INSERT ON alumnos FOR EACH ROW
+BEGIN
+  IF NEW.email = NULL THEN
+    DECLARE dominio VARCHAR(50);
+    SET dominio = SUBSTRING_INDEX(UUID(), '-', -1);
+    NEW.email = crear_email(NEW.nombre, NEW.apellido1, NEW.apellido2, CONCAT(dominio, '.com'));
+  END IF;
+END //
+DELIMITER ;
+```
 
 - Verificación:
   - Realiza inserciones en la tabla y verifica el correcto funcionamiento de las __funciones y triggers__.
   - Realiza un procedimiento que realice la inserción de un número de elementos que se pasa como parámetro. Incluye la máxima aleatoridad posible.
-  
-## Referencias
+ 
+__Procedimiento "generar_alumnos"__:
+```sql
+DROP PROCEDURE IF EXISTS generar_alumnos;
+DELIMITER //
+CREATE PROCEDURE generar_alumnos(IN cantidad, prefix VARCHAR)
+BEGIN
+  DECLARE counter INT DEFAULT 0;
+  DECLARE p_nombre VARCHAR(100);
+  DECLARE p_apellido1 VARCHAR(50);
+  DECLARE p_apellido2 VARCHAR(50);
+  WHILE counter < cantidad DO
+    SET p_nombre = CONCAT(prefix, SUBSTRING_INDEX(UUID(), '-', 1));
+    SET p_apellido1 = CONCAT(prefix, SUBSTRING_INDEX(UUID(), '-', 1));
+    SET p_apellido2 = CONCAT(prefix, SUBSTRING_INDEX(UUID(), '-', 1));
+    INSERT INTO alumnos (nombre, apellido1, apellido2) VALUES (
+      p_nombre, p_apellido1, p_apellido2
+    );
+    SET counter = counter + 1;
+  END WHILE;
+SELECT * FROM alumno;
+END //
+DELIMITER ;
+```
 
-- [Apuntes sobre triggers](../../trigers.md).
-- [Apuntes sobre procedimientos y funciones](../../procedimientos.md).
-- [Mysql SubString](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html).
-- [Mysql Replace](https://dev.mysql.com/doc/refman/8.0/en/replace.html).
 
 </div>
