@@ -90,9 +90,9 @@ DROP FUNCTION IF EXISTS crear_email;
 DELIMITER //
 CREATE FUNCTION crear_email(nombre VARCHAR(100), apellido1 VARCHAR(50), apellido2 VARCHAR(50), dominio VARCHAR(50)) RETURNS VARCHAR(100) DETERMINISTIC
 BEGIN
-  DECLARE caracter_nombre CHAR;
-  DECLARE caracteres_apellido1 CHAR;
-  DECLARE caracteres_apellido2 CHAR;
+  DECLARE caracter_nombre VARCHAR(100);
+  DECLARE caracteres_apellido1 VARCHAR(100);
+  DECLARE caracteres_apellido2 VARCHAR(100);
 
   SET caracter_nombre = SUBSTRING(nombre, 1, 1);
   SET caracteres_apellido1 = SUBSTRING(apellido1, 1, 3);
@@ -113,14 +113,13 @@ __Trigger "crear_email_before_insert"__:
 DROP TRIGGER IF EXISTS crear_email_before_insert;
 DELIMITER //
 CREATE TRIGGER crear_email_before_insert
-BEFORE INSERT ON alumnos FOR EACH ROW
+BEFORE INSERT ON alumnos
+FOR EACH ROW
 BEGIN
-  IF NEW.email = NULL THEN
-    DECLARE dominio VARCHAR(50);
-    SET dominio = SUBSTRING_INDEX(UUID(), '-', -1);
-    NEW.email = crear_email(NEW.nombre, NEW.apellido1, NEW.apellido2, CONCAT(dominio, '.com'));
+  IF NEW.email IS NULL THEN 
+    SET NEW.email = crear_email(NEW.nombre, NEW.apellido1, NEW.apellido2, CONCAT(SUBSTRING_INDEX(UUID(), '-', 1), '.com'));
   END IF;
-END //
+END;//
 DELIMITER ;
 ```
 
@@ -132,12 +131,13 @@ __Procedimiento "generar_alumnos"__:
 ```sql
 DROP PROCEDURE IF EXISTS generar_alumnos;
 DELIMITER //
-CREATE PROCEDURE generar_alumnos(IN cantidad, prefix VARCHAR)
+CREATE PROCEDURE generar_alumnos(IN cantidad INT, prefix VARCHAR(50))
 BEGIN
   DECLARE counter INT DEFAULT 0;
   DECLARE p_nombre VARCHAR(100);
-  DECLARE p_apellido1 VARCHAR(50);
-  DECLARE p_apellido2 VARCHAR(50);
+  DECLARE p_apellido1 VARCHAR(100);
+  DECLARE p_apellido2 VARCHAR(100);
+
   WHILE counter < cantidad DO
     SET p_nombre = CONCAT(prefix, SUBSTRING_INDEX(UUID(), '-', 1));
     SET p_apellido1 = CONCAT(prefix, SUBSTRING_INDEX(UUID(), '-', 1));
@@ -147,10 +147,29 @@ BEGIN
     );
     SET counter = counter + 1;
   END WHILE;
-SELECT * FROM alumno;
+SELECT * FROM alumnos;
 END //
 DELIMITER ;
 ```
 
+__Comprobación del funcionamiento:__
+```sql
+CALL generar_alumnos(10, 'Alumno');
+-- Los emails se generan automáticamente, de forma aleatoria, gracias al trigger.
++----+----------------+----------------+----------------+----------------------+
+| id | nombre         | apellido1      | apellido2      | email                |
++----+----------------+----------------+----------------+----------------------+
+| 41 | Alumnoe7a34a96 | Alumnoe7a34b1a | Alumnoe7a34b55 | aalualu@e7a3540a.com |
+| 42 | Alumnoe7a49874 | Alumnoe7a49ae6 | Alumnoe7a49b33 | aalualu@e7a4a17d.com |
+| 43 | Alumnoe7a5f562 | Alumnoe7a5f5ca | Alumnoe7a5f5ef | aalualu@e7a5fa44.com |
+| 44 | Alumnoe7a6daa3 | Alumnoe7a6db01 | Alumnoe7a6db28 | aalualu@e7a6df30.com |
+| 45 | Alumnoe7a7f598 | Alumnoe7a7f5f6 | Alumnoe7a7f617 | aalualu@e7a7f9db.com |
+| 46 | Alumnoe7a8ee66 | Alumnoe7a8eeab | Alumnoe7a8eecb | aalualu@e7a8f130.com |
+| 47 | Alumnoe7a96e66 | Alumnoe7a96ea8 | Alumnoe7a96ec7 | aalualu@e7a97143.com |
+| 48 | Alumnoe7aa17d5 | Alumnoe7aa1816 | Alumnoe7aa1832 | aalualu@e7aa1a81.com |
+| 49 | Alumnoe7aaa203 | Alumnoe7aaa238 | Alumnoe7aaa24e | aalualu@e7aaa498.com |
+| 50 | Alumnoe7ab2d51 | Alumnoe7ab2d99 | Alumnoe7ab2db8 | aalualu@e7ab309f.com |
++----+----------------+----------------+----------------+----------------------+
+```
 
 </div>
