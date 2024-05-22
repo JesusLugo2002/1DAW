@@ -107,9 +107,6 @@ BEGIN
 END //
 DELIMTER ;
 ```
-> ![NOTE]
-> FIJO ESTA MONDÁ ENTRA EN EL TEORICO, PAREN BOLAS A LO SIGUIENTE.
-
 Donde dice __CARACTERISTICA__ se debe reemplazar con una característica de función que MySql tiene definida; estas son:
 - __DETERMINISTIC__: Indica que la función siempre devuelve el mismo resultado cuando se utilizan los mismos parámetros de entrada.
 - __NOT DETERMINISTIC__: Indica que la función no siempre devuelve el mismo resultado, aunque se utilicen los mismos parámetros de entrada. Esta es la opción que se selecciona por defecto cuando no se indica una característica de forma explícita.
