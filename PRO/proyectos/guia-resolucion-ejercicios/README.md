@@ -1,7 +1,7 @@
 # Guia de resolución de ejercicios
 
 <div align=center>
-    <img src="../../../images/bg3.gif" width="60%" alt="bg"/>
+    <img src="../../../images/bg2.gif" width="60%" alt="bg"/>
 </div>
 
 Esto lo hago meramente con el motivo de plantear un método para solucionar los ejercicios que se nos presenten (o al menos es el que hago yo internamente) con el fin de ayudar a quien se vea un poco complicado con, no tanto el tema de la sintaxis o el uso de funciones en Python, sino con la implementación de los mismos; la lógica que debe tomarse para solucionar problemas de programación.
