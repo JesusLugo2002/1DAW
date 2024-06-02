@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Dado con Flex</title>
+        <style type="text/css">
+            .circulo {
+                background: gray;
+                border-radius: 100%;
+                width: 45px;
+                height: 45px;
+            }
+            .cara {
+                border: solid 3px gray;
+                background: #E6E6E6;
+                border-radius: 25px;
+                width: 180px;
+                height: 180px;
+                padding: 20px;
+                display: flex;
+                flex-flow: row wrap;
+            }
+            .flex-container {
+                margin: auto;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                height: 550px;
+                width: 850px;
+                background: linear-gradient(#2E77BC, #0B610B);
+                padding: 70px;
+            }
+            .flex-container .cara:nth-child(n+4) {
+                align-self: flex-end;
+                margin-top: auto;
+            }
+            .uno {
+                align-items: center;
+                justify-content: center;
+                margin-right: 5%;
+            }
+            .dos {
+                justify-content: space-between;
+                margin-left: 5%;
+            }
+            .dos .circulo:nth-child(2) {
+                align-self: flex-end;
+            }
+            .tres {
+                margin-left: 10%;
+                justify-content: space-between;
+            }
+            .tres .circulo:nth-child(2) {
+                align-self: center;
+            }
+            .tres .circulo:nth-child(3) {
+                align-self: flex-end;
+            }
+            .cuatro {
+                justify-content: space-between;
+            }
+            .cuatro .circulo:nth-child(1) {
+                margin-right: 25%;
+            }
+            .cuatro .circulo:nth-child(2) {
+                margin-left: 25%;
+            }
+            .cuatro .circulo:nth-child(3) {
+                margin-right: auto;
+                align-self: flex-end;
+            }
+            .cuatro .circulo:nth-child(4) {
+                align-self: flex-end;
+                margin-left: auto;
+            }
+            .cinco {
+                justify-content: space-around;
+            }
+            .cinco .circulo:nth-child(1) {
+                margin-right: auto;
+                align-self: flex-start;
+            }
+            .cinco .circulo:nth-child(2) {
+                margin-left: auto;
+                align-self: flex-start;
+            }
+            .cinco .circulo:nth-child(3) {
+                align-self: center;
+                margin-right: 30%;
+                margin-left: 30%;
+            }
+            .cinco .circulo:nth-child(4) {
+                margin-right: 25%;
+                align-self: flex-end;
+            }
+            .cinco .circulo:nth-child(5) {
+                align-self: flex-end;
+                margin-left: auto;
+            }
+            .seis {
+                flex-flow: column wrap;
+                justify-content: space-between;
+            }
+            .seis .circulo:nth-child(2) {
+                margin-top: 10%;
+            }
+            .seis .circulo:nth-child(3) {
+                margin-top: 10%;
+            }
+            .seis .circulo:nth-child(n+4) {
+                align-self: flex-end;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="cara uno">
+                <div class="circulo"></div>
+            </div>
+            <div class="cara dos">
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+            </div>
+            <div class="cara tres">
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+            </div>
+            <div class="cara cuatro">
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+            </div>
+            <div class="cara cinco">
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+            </div>
+            <div class="cara seis">
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+                <div class="circulo"></div>
+            </div>
+        </div>
+    </body>
+</html>
