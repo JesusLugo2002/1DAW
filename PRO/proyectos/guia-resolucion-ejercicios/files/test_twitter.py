@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Generator
 
 import pytest
-from twitter import Tweet, Twitter, TwitterError, User, create_db
+from twitter_resuelto import Tweet, Twitter, TwitterError, User, create_db
 
 TEST_DB_PATH = 'test_twitter.db'
 
