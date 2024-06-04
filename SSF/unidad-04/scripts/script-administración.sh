@@ -21,7 +21,7 @@ ERR_NOGRP=25
 
 group=$1
 
-trap `echo "Gestión de usuarios en proceso, NO SE PUEDE TERMINAR"` SIGTERM # NO SIRVE... :(
+trap 'echo "Gestión de usuarios en proceso, NO SE PUEDE TERMINAR"' SIGTERM # AHORA SIRVE... :)
 
 if [ -z "$group" ]; then
     echo "ERROR: No ha indicado ningún grupo primario."
