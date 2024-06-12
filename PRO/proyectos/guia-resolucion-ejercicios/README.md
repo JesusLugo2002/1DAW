@@ -11,7 +11,7 @@ Esto lo hago meramente con el motivo de plantear un método para solucionar los 
 
 Por lo que no me detendré a explicar cosas como, por ejemplo, _el módulo sqlite3 tiene el método execute() que sirve para..._, para eso tienen los apuntes del Sergio. Aquí plantearé un método para solucionar ejercicios abarcándolo totalmente.
 
-Para estas explicaciones, intentaré tomar puntos teóricos (serán las etiquetas _NOTE_ en el readme) a la par de ejecución de código tomando como base el ejercicio [twitter.py de AprendePython](./files/twitter.py).
+Para estas explicaciones, estaré tomando como base el ejercicio [twitter.py de AprendePython](./files/twitter_base.py).
 <br>
 
 ## Contenido
